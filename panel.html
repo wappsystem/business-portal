@@ -1,0 +1,84 @@
+<div>
+    <div id=toolbar__ID>
+        <a id=back__ID>Back</a><span class=tab__ID></span><span id=nav_link__ID></span>
+    </div>
+    <div id=panel__ID style='clear:left;'>
+        <div class='nav__ID'>
+			<br>
+			<ul>
+				<li data-name=module>Modules</li>
+				<li data-name=query>Queries</li>
+				<br>
+				<li data-name=import_and_export>Import and export</li>
+				<br>
+			</ul>
+        </div>
+    </div>
+</div>
+<script>
+//---------------------------------------------
+function F__ID(){
+	//---------------------------------------------
+	VmInclude:__LIB__/vmiis/Common-Code/navigation/navigation.js
+	VmInclude:__LIB__/vmiis/Common-Code/style/ease-in-out_2.js
+	//---------------------------------------------
+	var module_list=function(){
+		_app_id='';
+		//---------------------------------------------
+		var L=$vm.module_list,A=_app_id,G='https://vmiis.github.io/modules';
+		if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost'){
+			G=window.location.protocol+'//'+window.location.host+"/vmiis/modules";
+		}
+		//---------------------------------------------
+		//variables used inside modules
+		var v={
+			app_id:_app_id,
+			module_tid      :'20010433',
+			query_tid       :'20010430',
+		}
+		//---------------------------------------------
+		L[A+'module']        ={table_id:v.module_tid, var:v, url:G+'/portal/module.html'};
+		L[A+'query']         ={table_id:v.query_tid,  var:v, url:G+'/portal/query.html',form_module:A+'query_form'};
+		L[A+'query_form']    ={table_id:v.query_tid,  var:v, url:G+'/portal/query.form.html'};
+		L[A+'import_and_export']={                           url:G+'/portal/import_and_export.html'};
+		//---------------------------------------------
+	}
+	module_list();
+	//---------------------------------------------
+	_set_li_permissions();
+	//---------------------------------------------
+	$('#D__ID').on('load',function(){
+		_nav_name='Business Portal';
+		_set_nav_link();
+	});
+	//---------------------------------------------
+}
+</script>
+<style>
+    VmInclude:__LIB__/vmiis/Common-Code/navigation/navigation.css
+    VmInclude:__LIB__/vmiis/Common-Code/style/ease-in-out_2.css
+    #D__ID{
+        background: url("__LIB__/vmiis/common-code/image/texture.png");
+    }
+    .nav__ID span{
+        color:#005500;
+    }
+    .nav__ID li{
+        padding-top:3px;
+        padding-bottom:3px;
+    }
+    .nh__ID{
+        color:#999!Important;
+        font-size:8pt;
+        font-weight: normal!Important;
+        margin:0!Important;
+    }
+    ul{
+        padding-left:28px;
+    }
+    @media screen and (max-width:900px){
+        #D__ID{
+            font-size:16pt;
+        }
+    }
+</style>
