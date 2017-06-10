@@ -43,6 +43,18 @@
 								   "url" : "https://wappsystem.github.io/modules/grace-he-i/client/documents.html"
 								}
 							]
+						},
+						{
+							"name" : "Scheduler",
+							"tasks" :
+							[
+								{
+								   "module_id" : "scheduler",
+								   "name" : "All Scheduled Records",
+								   "table_id" : "20007387",
+								   "url" : "https://wappsystem.github.io/modules/grace-he-i/client/scheduler_record.html"
+								}
+							]
 						}
 					]
 				},
@@ -76,6 +88,50 @@
 								   "name" : "Task List",
 								   "table_id" : "20007618",
 								   "url" : "https://wappsystem.github.io/modules/grace-he-i/setup/task_list.html"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"child_panel":
+		{
+			"url":"https://vmiis.github.io/modules/panels/child.html",
+			"columns":
+			[
+				{
+					"sections":
+					[
+						{
+							"name":"Client's records",
+							"tasks":
+							[
+								{
+									"module_id" : "child_passport",
+									"name" : "Passport",
+									"table_id" : "20007359",
+									"url" : "https://wappsystem.github.io/modules/grace-he-i/client/passport.html",
+									"single_record":"1"
+								},
+								{
+									"module_id" : "child_edu_info",
+									"name" : "Education Information",
+									"table_id" : "20007360",
+									"url" : "https://wappsystem.github.io/modules/grace-he-i/client/education_information.html",
+									"single_record":"1"
+								},
+								{
+								   "module_id" : "child_doc_upload",
+								   "name" : "Document Uploads",
+								   "table_id" : "20007358",
+								   "url" : "https://wappsystem.github.io/modules/grace-he-i/client/documents.html"
+								},
+								{
+								   "module_id" : "child_scheduler",
+								   "name" : "Scheduler",
+								   "table_id" : "20007387",
+								   "url" : "https://wappsystem.github.io/modules/grace-he-i/client/scheduler_record.html"
 								}
 							]
 						}
