@@ -1,0 +1,19 @@
+{
+	"library_path":"https://cbs.wappsystem.com/dev/github",
+	"parts_path":"https://vmiis.github.io/parts",
+	"api_path":"https://cbs.wappsystem.com/pro/",
+	"server":"production",
+	"modules":
+	{
+		"home":
+		{
+			"url":"https://vmiis.github.io/modules/home/home.html"
+		}
+	},
+	"panels":
+	{
+		"main":{
+			"config_url":"https://vmiis.github.io/configurations/control_panel/wappsystem_business_portal.json"
+		}
+	}
+}
