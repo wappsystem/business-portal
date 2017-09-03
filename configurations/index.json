@@ -1,19 +1,26 @@
 {
 	"library_path":"https://cbs.wappsystem.com/dev/github",
 	"parts_path":"https://vmiis.github.io/parts",
-	"api_path":"https://cbs.wappsystem.com/pro/",
-	"server":"production",
+	"image_path":"https://image.datalinkedin.com",
+	"api_path_development":"https://cbs.wappsystem.com/dev/",
+	"api_path_production":"https://cbs.wappsystem.com/pro/",
+	"api_path_woolcock":"https://rt.woolcock.org.au/",
 	"modules":
 	{
 		"home":
 		{
-			"url":"https://vmiis.github.io/modules/home/home.html"
-		}
-	},
-	"panels":
-	{
-		"main":{
-			"config_url":"https://vmiis.github.io/configurations/control_panel/wappsystem_business_portal.json"
+			"url":"/modules/static/home.html"
+		},
+		"about":
+		{
+			"url":"/modules/static/about/panel.html"
+		},
+		"portal":
+		{
+			"module_id":"application",
+			"name":"Applications",
+			"table_id":"20010729",
+			"url":"/modules/dynamic/business-portal/application.html"
 		}
 	}
 }
